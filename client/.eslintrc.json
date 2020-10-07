@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "global": true,
+    "document": true,
+    "setTimeout": true,
+    "setInterval": true,
+    "console": true,
+    "window": true,
+    "__DEV__": true
+  }
+}
