@@ -2,9 +2,9 @@ html {
   height: 100%;
 }
 
-#root {
-  height: 100vh;
-}
+/*#root {*/
+/*  height: 100vh;*/
+/*}*/
 
 body {
   margin: 0;
@@ -21,6 +21,8 @@ code {
     monospace;
 }
 
-.debug {
-  border: 1px solid red;
+.main {
+  max-width: 1098px;
 }
+/*  */
+
