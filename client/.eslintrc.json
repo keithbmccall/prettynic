@@ -4,9 +4,12 @@
       "version": "detect"
     }
   },
-  "plugins": ["prettier", "jsx-a11y", "import","@typescript-eslint"],
+  "plugins": ["prettier", "jsx-a11y", "import", "@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
+    "kentcdodds",
+    "kentcdodds/react",
+    "kentcdodds/jsx-a11y",
+    "kentcdodds/best-practices",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier"
@@ -25,7 +28,8 @@
     "__DEV__": true
   },
   "rules": {
-    "import/no-unresolved": "error",
-    "@typescript-eslint/rule-name": "error"
+    "react/prop-types": 0,
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/rule-name": 0
   }
 }
