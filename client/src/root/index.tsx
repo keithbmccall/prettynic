@@ -1,14 +1,17 @@
 import React from "react";
-import { Layout } from "../components/layout";
-import { Navbar } from "../components/navbar";
+import { Layout } from "../content/components/layout";
+import { Navbar } from "../content/components/navbar";
 import ContentRouter from "../router";
+import { PlatformContextProvider } from "../platform";
 
 const Root = () => {
   return (
-    <Layout>
-      <Navbar />
-      <ContentRouter />
-    </Layout>
+    <PlatformContextProvider>
+      <Layout>
+        <Navbar />
+        <ContentRouter />
+      </Layout>
+    </PlatformContextProvider>
   );
 };
 

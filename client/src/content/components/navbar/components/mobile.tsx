@@ -1,0 +1,27 @@
+import React from "react";
+import classNames from "classnames";
+import { Navlogo } from "./navlogo";
+import { useNavbar } from "../hooks";
+import { NavLinkWrapper } from "./navlinkwrapper";
+import { Hamburger } from "./hamburger";
+
+export const MobileNavbar = () => {
+  const { navbarOpen, toggleNavbar } = useNavbar();
+
+  return (
+    <header
+      className={classNames("fixed  top-0 left-0 w-100 pa2 bg-black", {
+        open: navbarOpen,
+      })}
+    >
+      <div className="flex relative justify-center w-100">
+        <Hamburger onClick={toggleNavbar} />
+        <Navlogo />
+      </div>
+
+      <nav id="nav" className="absolute w-90 top-0 left-0 vh-100 pa5">
+        <NavLinkWrapper />
+      </nav>
+    </header>
+  );
+};
