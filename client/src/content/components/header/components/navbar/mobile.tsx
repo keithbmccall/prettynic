@@ -1,8 +1,8 @@
 import React from "react";
 import classNames from "classnames";
-import { Navlogo } from "./navlogo";
-import { useNavbar } from "../hooks";
-import { NavLinkWrapper } from "./navlinkwrapper";
+import { Navlogo } from "../navlogo";
+import { useNavbar } from "../../hooks";
+import { NavlinkWrapper } from "../navlink";
 import { Hamburger } from "./hamburger";
 
 export const MobileNavbar = () => {
@@ -20,7 +20,7 @@ export const MobileNavbar = () => {
       </div>
 
       <nav id="nav" className="absolute w-90 top-0 left-0 vh-100 pa5">
-        <NavLinkWrapper />
+        <NavlinkWrapper />
       </nav>
     </header>
   );
