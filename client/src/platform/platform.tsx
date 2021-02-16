@@ -4,13 +4,9 @@ type PlatformContextType = {
   isMobile: boolean;
 };
 
-const InitialPlatformContext: PlatformContextType = {
+const PlatformContext = createContext<PlatformContextType>({
   isMobile: true,
-};
-
-const PlatformContext = createContext<PlatformContextType>(
-  InitialPlatformContext
-);
+});
 
 export const usePlatformContext = () => useContext(PlatformContext);
 

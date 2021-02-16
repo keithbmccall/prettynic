@@ -3,14 +3,17 @@ import { Layout } from "../content/components/layout";
 import { Navbar } from "../content/components/navbar";
 import ContentRouter from "../router";
 import { PlatformContextProvider } from "../platform";
+import { StateContextProvider } from "../state";
 
 const Root = () => {
   return (
     <PlatformContextProvider>
-      <Layout>
-        <Navbar />
-        <ContentRouter />
-      </Layout>
+      <StateContextProvider>
+        <Layout>
+          <Navbar />
+          <ContentRouter />
+        </Layout>
+      </StateContextProvider>
     </PlatformContextProvider>
   );
 };
