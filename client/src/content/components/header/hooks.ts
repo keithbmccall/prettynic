@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export const useNavbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isNavbarOpen, setNavbarOpen] = useState(false);
 
-  const toggleNavbar = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+  const toggleNavbar = useCallback(() => {
+    setNavbarOpen(!isNavbarOpen);
+  }, [isNavbarOpen]);
+
+  const openNavbar = useCallback(() => setNavbarOpen(true), []);
+
+  const closeNavbar = useCallback(() => setNavbarOpen(false), []);
 
   return {
-    navbarOpen,
+    closeNavbar,
+    isNavbarOpen,
+    openNavbar,
     toggleNavbar,
   };
 };

@@ -1,7 +1,7 @@
 import { useLocation, useRouteMatch } from "react-router-dom";
 import { Locations } from "./urls";
 
-const getPostTo = (id: string | number) => Locations.POST + id;
+const getPostTo = (id: string | number) => `${Locations.POST}${id}`;
 
 export const useRouter = () => {
   const routeMatch = useRouteMatch();

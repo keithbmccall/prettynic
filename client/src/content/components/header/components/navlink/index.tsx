@@ -1,1 +1,1 @@
-export * from "./navlink-wrapper"
+export * from "./navlink-wrapper";

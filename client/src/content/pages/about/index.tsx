@@ -1,8 +1,6 @@
 import React from "react";
-import {Page} from "../page";
+import { Page } from "../page";
 
-export const AboutPage = () =>{
-
-
-    return  <Page> about </Page>
-}
+export const AboutPage = () => {
+  return <Page> about </Page>;
+};

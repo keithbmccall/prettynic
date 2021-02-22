@@ -1,8 +1,8 @@
 import React, { FC, useMemo } from "react";
-import { monthDayTime } from "../../../../utils";
-import { PostTitle } from "./post-title";
-import { useRouter } from "../../../../router";
 import classNames from "classnames";
+import { monthDayTime } from "../../../../utils";
+import { useRouter } from "../../../../router";
+import { PostTitle } from "./post-title";
 
 interface PostProps {
   post: {
@@ -29,7 +29,7 @@ const Post: FC<PostProps> = ({ post, index }) => {
     >
       <PostTitle to={to} title={title} />
       <p className="ma0 f6 tc light-silver">{monthDayTime(timestamp)}</p>
-      <div className="h5"></div>
+      <div className="h5" />
       <p className="ph2 f5 lh-copy tracked">{body}</p>
     </div>
   );

@@ -7,6 +7,6 @@ export const Page: FC = ({ children }) => {
   }, []);
 
   return (
-    <div className={"pt3 flex flex-column w-100 items-center"}>{children}</div>
+    <div className="pt3 flex flex-column w-100 items-center">{children}</div>
   );
 };

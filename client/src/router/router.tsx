@@ -2,10 +2,10 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import PostsPage from "../content/pages/posts";
 import HomePage from "../content/pages/home";
-import { Locations } from "./urls";
 import { ContactPage } from "../content/pages/contact";
 import { AboutPage } from "../content/pages/about";
 import { ArchivePage } from "../content/pages/archive";
+import { Locations } from "./urls";
 
 const ContentRouter = (props) => {
   return (

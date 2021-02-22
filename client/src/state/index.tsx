@@ -20,9 +20,15 @@ const StateReducer = (state: State, action) => {
   }
 };
 
+export const useAppState = () => {
+  const [state, dispatch] = useReducer(StateReducer, InitialState);
+
+  return { state, dispatch };
+};
+
 export const usePosts = () => {
   const { state } = useAppState();
-  return state?.posts;
+  return state.posts;
 };
 
 export const setPosts = (posts) => {
@@ -31,12 +37,6 @@ export const setPosts = (posts) => {
   //   type: "FETCH_POSTS",
   //   value: posts,
   // });
-};
-
-export const useAppState = () => {
-  const [state, dispatch] = useReducer(StateReducer, InitialState);
-
-  return { state, dispatch };
 };
 
 export const StateContextProvider: FC = ({ children }) => {

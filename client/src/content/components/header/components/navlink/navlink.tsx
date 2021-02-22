@@ -9,9 +9,13 @@ interface NavlinkProps {
     name: string;
     href: Locations;
   };
+  onClick?: () => void;
 }
 
-export const Navlink: FC<NavlinkProps> = ({ link: { name, href } }) => {
+export const Navlink: FC<NavlinkProps> = ({
+  link: { name, href },
+  onClick,
+}) => {
   const { isMobile } = usePlatformContext();
   return (
     <li>
@@ -22,6 +26,7 @@ export const Navlink: FC<NavlinkProps> = ({ link: { name, href } }) => {
         })}
         to={href}
         title="Home"
+        onClick={onClick}
       >
         {name}
       </Link>

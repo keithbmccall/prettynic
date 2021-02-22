@@ -30,6 +30,11 @@
   "rules": {
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
-    "@typescript-eslint/rule-name": 0
+    "@typescript-eslint/rule-name": 0,
+    "jsx-a11y/click-events-have-key-events": 1,
+    "@typescript-eslint/no-unused-vars": 1,
+    "react/self-closing-comp": 1,
+    "@typescript-eslint/no-unnecessary-condition": 1,
+    "@typescript-eslint/no-explicit-any": 1
   }
 }

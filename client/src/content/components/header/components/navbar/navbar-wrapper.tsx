@@ -4,7 +4,7 @@ import { DesktopNavbar } from "./desktop";
 import { MobileNavbar } from "./mobile";
 
 export const Navbar = () => {
-    const { isMobile } = usePlatformContext();
+  const { isMobile } = usePlatformContext();
 
-    return isMobile ? <MobileNavbar /> : <DesktopNavbar />;
+  return isMobile ? <MobileNavbar /> : <DesktopNavbar />;
 };

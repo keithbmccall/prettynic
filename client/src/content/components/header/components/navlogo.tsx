@@ -7,10 +7,9 @@ export const Navlogo = () => {
   const { isMobile } = usePlatformContext();
   return (
     <a
-      className={classNames(
-        "mid-gray link dim w-25-l mb2 mb0-l",
-        { "tc": isMobile }
-      )}
+      className={classNames("mid-gray link dim w-25-l mb2 mb0-l", {
+        tc: isMobile,
+      })}
       href={Locations.HOME}
       title="Home"
     >
