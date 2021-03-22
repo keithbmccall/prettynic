@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo Starting up!
+echo $'\e[1;32m'Starting up!
+echo
 
 osascript -e 'tell app "Terminal"
   do script "nicole && cd server && yarn start"
@@ -8,8 +9,6 @@ end tell'
 
 cd client && yarn debug-start
 
-
-#cd client && yarn start
 
 
 
