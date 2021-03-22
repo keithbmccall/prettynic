@@ -7,7 +7,7 @@ import { AboutPage } from "../content/pages/about";
 import { ArchivePage } from "../content/pages/archive";
 import { Locations } from "./urls";
 
-const ContentRouter = (props) => {
+const ContentRouter = () => {
   return (
     <Switch>
       <Route path={`${Locations.POST}:id`}>

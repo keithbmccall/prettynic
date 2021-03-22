@@ -1,20 +1,16 @@
 import React, { FC, useMemo } from "react";
 import classNames from "classnames";
 import { monthDayTime } from "../../../../utils";
-import { PostTitle } from "./post-title";
 import { useRouter } from "../../hooks";
+import { PostType } from "../../../../data";
+import { PostTitle } from "./post-title";
 
 interface PostProps {
-  post: {
-    id: number;
-    title: string;
-    timestamp: string;
-    body: string;
-  };
-  index: number;
+  post: PostType;
+  index?: number;
 }
 
-const Post: FC<PostProps> = ({ post, index }) => {
+const Post: FC<PostProps> = ({ post, index = 0 }) => {
   const { title, timestamp, body, id } = post;
   const { getPostTo } = useRouter();
 

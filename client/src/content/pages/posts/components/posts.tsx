@@ -1,15 +1,20 @@
 import React, { FC } from "react";
-import { getData } from "../../../../data";
+import { usePostsQuery } from "../../../../data";
+import { Loading } from "../../../components/loading";
 import Post from "./post";
 
 const Posts: FC = () => {
-  const { posts } = getData();
+  const { posts, isLoading } = usePostsQuery();
 
   return (
     <div className="w-90">
-      {posts.map((post, i) => {
-        return <Post post={post} key={post.id} index={i} />;
-      })}
+      {isLoading || !posts ? (
+        <Loading />
+      ) : (
+        posts.map((post, i) => {
+          return <Post post={post} key={post.id} index={i} />;
+        })
+      )}
     </div>
   );
 };

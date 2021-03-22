@@ -16,7 +16,6 @@ export const NavlinkWrapper: FC<NavlinkWrapperProps> = ({ onClick }) => {
         "justify-center ": !isMobile,
         "flex-column tc w-100 pl0": isMobile,
       })}
-      onClick={onClick}
     >
       {navlinks.map((link) => (
         <Navlink

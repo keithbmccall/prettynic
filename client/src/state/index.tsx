@@ -1,5 +1,5 @@
 import React, { createContext, FC, useReducer } from "react";
-import { PostType } from "./types";
+import { PostType } from "../data";
 
 type State = {
   posts: PostType[];
@@ -11,10 +11,17 @@ const InitialState: State = {
 
 const StateContext = createContext<State>(InitialState);
 
-const StateReducer = (state: State, action) => {
+type ActionType<Name extends string, Payload = {}> = {
+  type: Name;
+  payload: Payload;
+};
+
+type Action = ActionType<"FETCH_POSTS", PostType[]>;
+
+const StateReducer = (state: State, action: Action) => {
   switch (action.type) {
     case "FETCH_POSTS":
-      return { ...state, posts: action.value };
+      return { ...state, posts: action.payload };
     default:
       return state;
   }
@@ -31,11 +38,11 @@ export const usePosts = () => {
   return state.posts;
 };
 
-export const setPosts = (posts) => {
+export const setPosts = () => {
   // const { dispatch } = useAppState();
   // return dispatch({
   //   type: "FETCH_POSTS",
-  //   value: posts,
+  //   payload: posts,
   // });
 };
 
