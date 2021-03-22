@@ -1,8 +1,8 @@
 import React, { FC, useMemo } from "react";
 import classNames from "classnames";
 import { monthDayTime } from "../../../../utils";
-import { useRouter } from "../../../../router";
 import { PostTitle } from "./post-title";
+import { useRouter } from "../../hooks";
 
 interface PostProps {
   post: {

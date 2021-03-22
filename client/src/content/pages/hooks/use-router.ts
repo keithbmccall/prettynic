@@ -1,5 +1,5 @@
 import { useLocation, useRouteMatch } from "react-router-dom";
-import { Locations } from "./urls";
+import { Locations } from "../../../router/urls";
 
 const getPostTo = (id: string | number) => `${Locations.POST}${id}`;
 

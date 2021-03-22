@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { useRouter } from "../../../../router";
+import {useRouter} from "../../hooks";
+
 
 export interface PostTitle {
   title: string;
