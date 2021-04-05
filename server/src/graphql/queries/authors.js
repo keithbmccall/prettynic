@@ -1,4 +1,4 @@
-const authors = [
+export const authors = [
   {
     id: "1",
     firstName: "Nicole",
@@ -11,9 +11,6 @@ const authors = [
   },
 ];
 
-exports.Authors = {
-  authors,
-  queries: {
-    getAuthors: () => authors,
-  },
+export const queries = {
+  getAuthors: () => authors,
 };

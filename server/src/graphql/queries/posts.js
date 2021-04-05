@@ -1,4 +1,4 @@
-const posts = [
+export const posts = [
   {
     id: "1",
     title: "Article 1",
@@ -73,10 +73,7 @@ const posts = [
   },
 ];
 
-exports.Posts = {
-  posts,
-  queries: {
-    getPosts: () => posts,
-    getPost: (ctx, { id }) => posts.find((post) => post.id === id),
-  },
+export const queries = {
+  getPosts: () => posts,
+  getPost: (ctx, { id }) => posts.find((post) => post.id === id),
 };

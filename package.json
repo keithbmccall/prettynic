@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "scripts/launch.sh",
-    "upgrade": "scripts/upgrade.sh",
-    "upstart": "scripts/upgrade.sh && scripts/launch.sh"
+    "start": "_scripts/launch.sh",
+    "upgrade": "_scripts/upgrade.sh",
+    "upstart": "_scripts/upgrade.sh && _scripts/launch.sh"
   }
 }
