@@ -9,10 +9,10 @@ const HomePosts: FC = () => {
   console.log({ posts });
   return (
     <div className="w-90">
-      {!posts ? (
-        <Loading />
+      {posts ? (
+          posts.map((post, i) => <Post post={post} key={post.id} index={i}/>)
       ) : (
-        posts.map((post, i) => <Post post={post} key={post.id} index={i} />)
+          <Loading/>
       )}
     </div>
   );

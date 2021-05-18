@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/prefer-ts-expect-error,  @typescript-eslint/no-use-before-define, consistent-return */
 import React, { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
 import { BlockImage } from "../images";
