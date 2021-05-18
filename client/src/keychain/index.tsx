@@ -1,0 +1,12 @@
+export const keychain = {
+    api: {
+        url:
+            "https://api-us-west-2.graphcms.com/v2/ckny7guc6976c01wjgvms2fx8/master",
+        token:
+            "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2MTk0MTk2MTksImF1ZCI6WyJodHRwczovL2FwaS11cy13ZXN0LTIuZ3JhcGhjbXMuY29tL3YyL2Nrbnk3Z3VjNjk3NmMwMXdqZ3ZtczJmeDgvbWFzdGVyIiwiaHR0cHM6Ly9tYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiNWQ1MmY0OTAtODY4MS00YTFmLWIyMGItOGRkMDM1NjZjZTAzIiwianRpIjoiY2tueThtbm03YWNlNzAxd2owb25rNWt5diJ9.H3hu3rEv4lDSP_U_7_GBA-OqXLyM66xmbZkt-gZ3CHMF5PRuQnm6o5TOxRf66Israx5MIcAZMOP5A190ywAEUk5CQWxzXsqvtYpvioBEWP44Dtn4sGbhndVoVeT-kcHJoTiD59nqOpACQj1U8RPjiDHApHrll5J7OdqhC2ac5S8xSfyG4vi-yLi9dWXz9jeMeGaNvDX3vCVGMiV7Bd9gMvcA0e74G6oOGbEvmXxOEqEnnQyqhpixwm4u6cDILQhsI2yEvYMsZrsLcJk7UT0bSRJdkit-o1-TbkKdivVONMO4hgOHATvu2dP8gtp3KOAifBidLxTX3Ah_IWxSI6Hata8eTazt7bPDT2yVhAShFncmhZhSYQObMjej4pCxOxp-4qxAgKlC6h30BfYR11WfXItNJ6WmC0b7WJmRBQmyh3sM194AEt1nwa2tLCm7bdptd42rm4dzTvVW8CSc0uboZTtjuEH1O4FEy9AjzWbmVB_eSXKNE00EcEw-gIriRsMqSOUAvLQcqcG-6-6V4VASTFyIrD9VHhQdxt5H3myYWgraqnVe9fPBF4ADCX6yXU7Gun4Ym1QD2P_7t-cojegcN0POpfIKaVuhUqrEzMs-9nAYTYgDiHrG0MMwzRt0YIW-RHDq8K2K6GPu7tvEimAHJ0D-HKSNEYfInL4t3A4mkr0",
+    },
+};
+
+export const authorization = {
+    Authorization: `Bearer ${keychain.api.token}`,
+};
