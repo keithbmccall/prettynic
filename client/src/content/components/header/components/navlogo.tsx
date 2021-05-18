@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Locations } from "../../../../router";
+import { LOCATIONS } from "../../../../router";
 import { usePlatformContext } from "../../../../platform";
 
 export const Navlogo = () => {
@@ -10,7 +10,7 @@ export const Navlogo = () => {
       className={classNames("mid-gray link dim w-25-l mb2 mb0-l", {
         tc: isMobile,
       })}
-      href={Locations.HOME}
+      href={LOCATIONS.HOME}
       title="Home"
     >
       <img

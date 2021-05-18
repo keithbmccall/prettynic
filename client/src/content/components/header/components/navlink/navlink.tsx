@@ -2,12 +2,12 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { usePlatformContext } from "../../../../../platform";
-import { Locations } from "../../../../../router";
+import { LOCATIONS } from "../../../../../router";
 
 interface NavlinkProps {
   link: {
     name: string;
-    href: Locations;
+    href: LOCATIONS;
   };
   onClick?: () => void;
 }

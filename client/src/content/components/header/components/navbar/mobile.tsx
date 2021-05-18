@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useMemo } from "react";
 import classNames from "classnames";
 import { Navlogo } from "../navlogo";
 import { useNavbar } from "../../hooks";
 import { NavlinkWrapper } from "../navlink";
 import { Hamburger } from "./hamburger";
+import { useHeaderHeight } from "../../../../hooks";
 
 export const MobileNavbar = () => {
   const { isNavbarOpen, toggleNavbar, closeNavbar } = useNavbar();
+  const { style } = useHeaderHeight();
 
   return (
     <header
+      {...style}
       className={classNames("fixed top-0 left-0 w-100 pa2 bg-black", {
         open: isNavbarOpen,
       })}

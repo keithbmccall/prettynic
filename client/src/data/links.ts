@@ -1,20 +1,20 @@
-import { Locations } from "../router";
+import { LOCATIONS } from "../router";
 
 export const navlinks = [
   {
     name: "home",
-    href: Locations.HOME,
+    href: LOCATIONS.HOME,
   },
   {
     name: "about",
-    href: Locations.ABOUT,
+    href: LOCATIONS.ABOUT,
   },
   {
     name: "archive",
-    href: Locations.ARCHIVE,
+    href: LOCATIONS.ARCHIVE,
   },
   {
     name: "contact",
-    href: Locations.CONTACT,
+    href: LOCATIONS.CONTACT,
   },
 ];

@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import Posts from "../posts/components/posts";
+import HomePosts from "./components/home-posts";
 import { Page } from "../page";
 
 const HomePage: FC = () => {
   return (
     <Page>
-      <Posts />
+      <HomePosts />
     </Page>
   );
 };

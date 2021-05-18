@@ -1,12 +1,23 @@
 import React, { FC, useEffect } from "react";
 import { scrollToTop } from "../../utils";
+import classNames from "classnames";
 
-export const Page: FC = ({ children }) => {
+interface PageProps {
+  flush?: boolean;
+}
+
+export const Page: FC<PageProps> = ({ children, flush }) => {
   useEffect(() => {
     scrollToTop();
   }, []);
 
   return (
-    <div className="pt3 flex flex-column w-100 items-center">{children}</div>
+    <div
+      className={classNames("flex flex-column w-100 items-center", {
+        pt3: !flush,
+      })}
+    >
+      {children}
+    </div>
   );
 };

@@ -1,28 +1,24 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import PostsPage from "../content/pages/posts";
+import PostsPage from "../content/pages/post";
 import HomePage from "../content/pages/home";
-import { ContactPage } from "../content/pages/contact";
 import { AboutPage } from "../content/pages/about";
 import { ArchivePage } from "../content/pages/archive";
-import { Locations } from "./urls";
+import { LOCATIONS } from "./urls";
 
 const ContentRouter = () => {
   return (
     <Switch>
-      <Route path={`${Locations.POST}:id`}>
+      <Route path={`${LOCATIONS.POST}:id`}>
         <PostsPage />
       </Route>
-      <Route path={Locations.CONTACT}>
-        <ContactPage />
-      </Route>
-      <Route path={Locations.ABOUT}>
+      <Route path={LOCATIONS.ABOUT}>
         <AboutPage />
       </Route>
-      <Route path={Locations.ARCHIVE}>
+      <Route path={LOCATIONS.ARCHIVE}>
         <ArchivePage />
       </Route>
-      <Route path={Locations.HOME}>
+      <Route path={LOCATIONS.HOME}>
         <HomePage />
       </Route>
     </Switch>

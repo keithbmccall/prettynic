@@ -9,7 +9,6 @@ export const Layout: FC = (props) => {
     <div
       className={classNames("main center", {
         "pt5 mt5 mt4-l": !isMobile,
-        "pt5 mt2": isMobile,
       })}
     >
       {props.children}

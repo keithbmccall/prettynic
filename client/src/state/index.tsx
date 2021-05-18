@@ -1,5 +1,11 @@
-import React, { createContext, FC, useReducer } from "react";
-import { PostType } from "../data";
+import React, {
+  createContext,
+  FC,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
+import { PostType, usePostsQuery } from "../data";
 
 type State = {
   posts: PostType[];
@@ -27,29 +33,40 @@ const StateReducer = (state: State, action: Action) => {
   }
 };
 
-export const useAppState = () => {
-  const [state, dispatch] = useReducer(StateReducer, InitialState);
+const fetchPosts = (dispatch) => (payload) =>
+  dispatch({
+    type: "FETCH_POSTS",
+    payload,
+  });
 
-  return { state, dispatch };
+export const useAppContext = (): State => {
+  const context = useContext(StateContext);
+  if (!context) {
+    throw new Error("Use this only inside of context provider!");
+  }
+  return context;
 };
 
 export const usePosts = () => {
-  const { state } = useAppState();
-  return state.posts;
-};
-
-export const setPosts = () => {
-  // const { dispatch } = useAppState();
-  // return dispatch({
-  //   type: "FETCH_POSTS",
-  //   payload: posts,
-  // });
+  return useAppContext()?.posts;
 };
 
 export const StateContextProvider: FC = ({ children }) => {
-  const { state } = useAppState();
+  const { posts } = usePostsQuery();
+  const [state, dispatch] = useReducer(StateReducer, InitialState);
+
+  const contextState = {
+    ...state,
+    onFetchPosts: fetchPosts(dispatch),
+  };
+
+  useEffect(() => {
+    contextState.onFetchPosts(posts);
+  }, [posts]);
 
   return (
-    <StateContext.Provider value={state}>{children}</StateContext.Provider>
+    <StateContext.Provider value={contextState}>
+      {children}
+    </StateContext.Provider>
   );
 };

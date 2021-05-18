@@ -1,4 +1,4 @@
 .idea
 node_modules
-keychain
-keychain/*
+client/src/keychain
+client/src/keychain/*

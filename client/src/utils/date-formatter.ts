@@ -1,4 +1,4 @@
-export const monthDayTime = (timestamp: string) =>
+export const monthDayTime = (timestamp: string|Date) =>
   new Date(timestamp).toLocaleString("en-us", {
     month: "numeric",
     day: "numeric",

@@ -1,20 +1,15 @@
-import { QueryKey, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import { fetchQuery } from "../../fetch";
-import { useRouter } from "../../../content/pages/hooks";
 import { PostType } from "./types";
 
-interface GetPostQueryData {
-  post: PostType;
+interface GetPostsQueryData {
+  posts: PostType[];
 }
 
-const queryPost = async (
-  queryKey: QueryKey,
-  id: string
-): Promise<GetPostQueryData> => {
-  console.log({ id });
+const queryPosts = async (): Promise<GetPostsQueryData> => {
   const query = `
-    query GetPosts($id: ID!) {
-        post(where : { id: $id}) {
+    query {
+        posts {
             id
             title
             slug
@@ -50,27 +45,22 @@ const queryPost = async (
         }
     }`;
 
-  const res = await fetchQuery(query, { id });
+  const res = await fetchQuery(query);
 
   return res.data;
 };
 
-export const usePostQuery = (
-  postId?: string
-): {
-  post?: PostType;
+export const usePostsQuery = (): {
+  posts?: PostType[];
   error: unknown;
   isLoading: boolean;
 } => {
-  const { routeParams } = useRouter();
-  const id = postId ?? routeParams?.id;
-
-  const { data, error, isLoading } = useQuery(["get-post", id], queryPost, {
-    staleTime: Infinity, // 1 hr
+  const { data, error, isLoading } = useQuery("get-posts", queryPosts, {
+    staleTime: 3600000, // 1 hr
   });
-  console.log({ data });
+
   return {
-    post: data?.post,
+    posts: data?.posts,
     error,
     isLoading,
   };

@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.debug {
+  border: 1px solid goldenrod;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -85,4 +89,8 @@ code {
 
 #nav li {
   transition-delay: 2s;
+}
+
+#content-block p {
+  line-height: 1.7rem;
 }

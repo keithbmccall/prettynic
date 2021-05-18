@@ -1,4 +1,4 @@
-export enum Locations {
+export enum LOCATIONS {
   HOME = "/",
   POST = "/posts/",
   ABOUT = "/about/",

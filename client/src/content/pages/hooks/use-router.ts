@@ -1,5 +1,5 @@
 import {  useLocation, useRouteMatch } from "react-router-dom";
-import { Locations } from "../../../router/urls";
+import { LOCATIONS } from "../../../router/urls";
 
 type GetPostTo = (id: number | string) => string;
 
@@ -14,7 +14,7 @@ interface RouteMatch {
   url: string;
 }
 
-const getPostTo: GetPostTo = (id) => `${Locations.POST}${id}`;
+const getPostTo: GetPostTo = (id) => `${LOCATIONS.POST}${id}`;
 
 export const useRouter = (): {
   getPostTo: GetPostTo;
@@ -29,7 +29,7 @@ export const useRouter = (): {
   const routeMatch = useRouteMatch();
   const { pathname, search, hash, state } = useLocation();
 
-  const isHome = pathname === Locations.HOME;
+  const isHome = pathname === LOCATIONS.HOME;
 
   return {
     path: pathname,
