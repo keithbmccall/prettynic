@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
-    "debug-start": "craco start",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint": "eslint --ext .ts,.tsx src --fix --ignore-path .eslintignore",
@@ -94,7 +93,6 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "devDependencies": {
-    "@craco/craco": "^6.1.1",
     "@testing-library/dom": "^7.29.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
