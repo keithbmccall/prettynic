@@ -1,7 +1,7 @@
-import {FC} from "react";
-import {Loading} from "../../../components/loading";
+import { FC } from "react";
+import { Loading } from "../../../components/loading";
 import Post from "../../post/components/post";
-import {usePosts} from "../../../../providers/state";
+import { usePosts } from "../../../../providers/state";
 
 const HomePosts: FC = () => {
   const posts = usePosts();

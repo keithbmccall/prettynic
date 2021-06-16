@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { scrollToTop } from "../../utils";
+import { scrollToTop } from "@utils";
 
 interface PageProps {
   flush?: boolean;

@@ -2,8 +2,8 @@
 import { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
 import classNames from "classnames";
-import { BlockImage } from "../images";
 import { usePlatformContext } from "@providers";
+import { BlockImage } from "../images";
 
 interface ContentBlocksProps {
   content: {

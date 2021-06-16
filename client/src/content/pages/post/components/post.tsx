@@ -1,12 +1,12 @@
-import {FC, useMemo} from "react";
+import { FC, useMemo } from "react";
 import classNames from "classnames";
-import {monthDayTime} from "../../../../utils";
-import {useRouter} from "../../hooks";
-import {PostType} from "../../../../data";
-import {PostTitle} from "./post-title";
-import {CoverImage} from "../../../components/images";
-import {ContentBlocks} from "../../../components/content-blocks";
-import {usePlatformContext} from "../../../../providers/platform";
+import { monthDayTime } from "@utils";
+import { PostType } from "@data";
+import { CoverImage } from "@components/images";
+import { ContentBlocks } from "@components/content-blocks";
+import { usePlatformContext } from "@providers";
+import { useRouter } from "../../hooks";
+import { PostTitle } from "./post-title";
 
 interface PostProps {
   post: PostType;

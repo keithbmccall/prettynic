@@ -1,4 +1,3 @@
-
 import { Switch, Route } from "react-router-dom";
 import PostsPage from "../content/pages/post";
 import HomePage from "../content/pages/home";

@@ -1,2 +1,2 @@
 export * from "./platform";
-export * from "./use-is-dark-mode"
+export * from "./use-is-dark-mode";

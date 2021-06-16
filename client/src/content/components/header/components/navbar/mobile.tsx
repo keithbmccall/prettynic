@@ -2,8 +2,8 @@ import classNames from "classnames";
 import { Navlogo } from "../navlogo";
 import { useNavbar } from "../../hooks";
 import { NavlinkWrapper } from "../navlink";
-import { Hamburger } from "./hamburger";
 import { useHeaderHeight } from "../../../../hooks";
+import { Hamburger } from "./hamburger";
 
 export const MobileNavbar = () => {
   const { isNavbarOpen, toggleNavbar, closeNavbar } = useNavbar();

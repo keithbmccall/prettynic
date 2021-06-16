@@ -1,8 +1,8 @@
-import {FC} from "react";
+import { FC } from "react";
 import classNames from "classnames";
-import {usePlatformContext} from "../../../../../providers/platform";
-import {navlinks} from "../../../../../data/links";
-import {Navlink} from "./navlink";
+import { usePlatformContext } from "@providers";
+import { navlinks } from "@data";
+import { Navlink } from "./navlink";
 
 interface NavlinkWrapperProps {
   onClick?: () => void;
