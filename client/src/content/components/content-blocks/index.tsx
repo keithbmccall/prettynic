@@ -3,7 +3,7 @@ import { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
 import classNames from "classnames";
 import { usePlatformContext } from "@providers";
-import { BlockImage } from "../images";
+import { BlockImage } from "@components/images";
 
 interface ContentBlocksProps {
   content: {

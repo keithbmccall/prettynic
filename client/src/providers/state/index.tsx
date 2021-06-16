@@ -1,5 +1,5 @@
 import { createContext, FC, useContext, useEffect, useReducer } from "react";
-import { PostType, usePostsQuery } from "../../data";
+import { PostType, usePostsQuery } from "@data";
 
 type State = {
   posts: PostType[];

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Loading } from "../../../components/loading";
+import { Loading } from "@components/loading";
 import Post from "../../post/components/post";
 import { usePosts } from "../../../../providers/state";
 

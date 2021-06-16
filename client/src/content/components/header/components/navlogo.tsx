@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { LOCATIONS } from "../../../../router";
+import { LOCATIONS } from "@router";
 import { usePlatformContext } from "../../../../providers/platform";
 
 export const Navlogo = () => {
