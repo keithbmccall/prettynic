@@ -5,7 +5,7 @@ interface PageProps {
   flush?: boolean;
 }
 
-export const Page: FC<PageProps> = ({ children, flush }) => {
+export const Page: FC<PageProps> = ({ children }) => {
   useEffect(() => {
     scrollToTop();
   }, []);
