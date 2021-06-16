@@ -1,33 +1,44 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": false,
+    "rootDir": ".",
     "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "noFallthroughCasesInSwitch": true
+    "paths": {
+      "@providers": ["src/providers/index.ts"],
+      "@router": ["src/router/index.tsx"],
+      "@utils": ["src/utils/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@data": ["src/data/index.ts"],
+      "@components/content-blocks": [
+        "src/content/components/content-blocks/index.tsx"
+      ],
+      "@components/header": ["src/content/components/header/index.ts"],
+      "@components/images": ["src/content/components/images/index.tsx"],
+      "@components/loading": [
+        "src/content/components/loading/index.tsx"
+      ],
+      "@components/layout": ["src/content/components/layout/index.tsx"]
+    }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

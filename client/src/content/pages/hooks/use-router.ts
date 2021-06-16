@@ -1,4 +1,4 @@
-import {  useLocation, useRouteMatch } from "react-router-dom";
+import { useLocation, useRouteMatch } from "react-router-dom";
 import { LOCATIONS } from "../../../router/urls";
 
 type GetPostTo = (id: number | string) => string;

@@ -1,4 +1,3 @@
-import React from "react";
 import { Navlogo } from "../navlogo";
 import { NavlinkWrapper } from "../navlink";
 

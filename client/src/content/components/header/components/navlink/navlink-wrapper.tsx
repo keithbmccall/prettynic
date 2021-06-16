@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import classNames from "classnames";
-import { usePlatformContext } from "../../../../../platform";
-import { navlinks } from "../../../../../data/links";
+import { usePlatformContext } from "@providers";
+import { navlinks } from "@data";
 import { Navlink } from "./navlink";
 
 interface NavlinkWrapperProps {
