@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
+import {FC} from "react";
+import {Link} from "react-router-dom";
 import classNames from "classnames";
-import { usePlatformContext } from "../../../../../platform";
-import { LOCATIONS } from "../../../../../router";
+import {usePlatformContext} from "../../../../../providers/platform";
+import {LOCATIONS} from "../../../../../router";
 
 interface NavlinkProps {
   link: {

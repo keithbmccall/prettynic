@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import classNames from "classnames";
 import { Navlogo } from "../navlogo";
 import { useNavbar } from "../../hooks";

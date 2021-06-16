@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import {FC} from "react";
 import classNames from "classnames";
-import { useIsDarkMode, usePlatformContext } from "../../../platform";
+import {useIsDarkMode, usePlatformContext} from "../../../providers/platform";
 
 export const Layout: FC = (props) => {
   const { isMobile } = usePlatformContext();

@@ -1,9 +1,9 @@
-import React from "react";
-import { Layout } from "../content/components/layout";
-import { Navbar } from "../content/components/header";
+
+import {Layout} from "../content/components/layout";
+import {Navbar} from "../content/components/header";
 import ContentRouter from "../router";
-import { PlatformContextProvider } from "../platform";
-import { StateContextProvider } from "../state";
+import {PlatformContextProvider} from "../providers/platform";
+import {StateContextProvider} from "../providers/state";
 
 const Root = () => {
   return (

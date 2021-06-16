@@ -1,4 +1,4 @@
-import React, { createContext, FC, useContext, useMemo, useState } from "react";
+import {createContext, FC, useContext, useState} from "react";
 
 type PlatformContextType = {
   isMobile: boolean;

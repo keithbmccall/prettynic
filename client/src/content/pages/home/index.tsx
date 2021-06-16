@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import HomePosts from "./components/home-posts";
 import { Page } from "../page";
 

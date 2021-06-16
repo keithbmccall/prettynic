@@ -1,7 +1,7 @@
-import React from "react";
-import { usePlatformContext } from "../../../../../platform";
-import { DesktopNavbar } from "./desktop";
-import { MobileNavbar } from "./mobile";
+
+import {usePlatformContext} from "../../../../../providers/platform";
+import {DesktopNavbar} from "./desktop";
+import {MobileNavbar} from "./mobile";
 
 export const Navbar = () => {
   const { isMobile } = usePlatformContext();

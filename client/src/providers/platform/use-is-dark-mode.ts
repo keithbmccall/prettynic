@@ -1,4 +1,4 @@
-import { usePlatformContext } from "./platform";
+import {usePlatformContext} from "./platform";
 
 export const useIsDarkMode = () => {
   return usePlatformContext()?.isDarkMode;
