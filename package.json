@@ -7,10 +7,6 @@
     "upgrade": "scripts/upgrade.sh",
     "upstart": "scripts/upgrade.sh && scripts/launch.sh",
     "pull": "git pull origin main",
-    "heroku-push": "git checkout staging && git subtree push --prefix client heroku main"
-  },
-  "dependencies": {
-    "react": "17.0.0",
-    "react-dom": "17.0.0"
+    "heroku-push": "git checkout staging && git subtree push --prefix client heroku main && git checkout main"
   }
 }
