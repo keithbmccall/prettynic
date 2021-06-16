@@ -2,10 +2,12 @@ import React, { createContext, FC, useContext, useMemo, useState } from "react";
 
 type PlatformContextType = {
   isMobile: boolean;
+  isDarkMode: boolean;
 };
 
 const PlatformContext = createContext<PlatformContextType>({
   isMobile: true,
+  isDarkMode: true,
 });
 
 export const usePlatformContext = () => useContext(PlatformContext);
@@ -18,11 +20,11 @@ const getIsMobile = (force?: boolean) =>
 
 export const PlatformContextProvider: FC = ({ children }) => {
   const [isMobile] = useState(getIsMobile());
+  const [isDarkMode] = useState(true);
+
   return (
-    <PlatformContext.Provider value={{ isMobile }}>
+    <PlatformContext.Provider value={{ isMobile, isDarkMode }}>
       {children}
     </PlatformContext.Provider>
   );
 };
-
-
