@@ -1,8 +1,8 @@
-/* eslint-disable  @typescript-eslint/prefer-ts-expect-error,  @typescript-eslint/no-use-before-define, consistent-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment, @typescript-eslint/ban-ts-comment,  @typescript-eslint/no-use-before-define*/
 import React, { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
-import { BlockImage } from "../images";
 import classNames from "classnames";
+import { BlockImage } from "../images";
 import { usePlatformContext } from "../../../platform";
 
 interface ContentBlocksProps {
@@ -27,7 +27,7 @@ export const ContentBlocks: FC<ContentBlocksProps> = ({
       )}
     >
       {parse(content.html, {
-        // @ts-ignore
+        // @ts-expect-error
         replace: replacer(isMobile),
       })}
     </div>
@@ -35,7 +35,7 @@ export const ContentBlocks: FC<ContentBlocksProps> = ({
 };
 
 type DomNodeType = DOMNode & {
-  name: "p" | "img" | "div";
+  name: "div" | "img" | "p";
   attribs: any;
 };
 
@@ -43,12 +43,14 @@ type Replacer = (
   isMobile: boolean
 ) => (domNode: DomNodeType) => Element | ReactElement | undefined;
 
-const replacer: Replacer = (isMobile: boolean) => (domNode: DomNodeType) => {
+const replacer: Replacer = (isMobile) => (domNode) => {
   if (domNode?.name === "img") {
     const image = domNode.attribs;
+
     const size = isMobile ? {} : { height: image.height, width: image.width };
     return (
       <BlockImage src={image.src} alt={image.title} {...size} className="mv2" />
     );
   }
+  return undefined;
 };
