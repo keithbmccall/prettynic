@@ -37,6 +37,7 @@
     "@typescript-eslint/no-unnecessary-condition": 0,
     "@typescript-eslint/no-explicit-any": 1,
     "react/react-in-jsx-scope": 0,
-    "react/no-unstable-nested-components": 0
+    "react/no-unstable-nested-components": 0,
+    "one-var": 0
   }
 }
