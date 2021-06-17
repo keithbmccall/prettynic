@@ -7,6 +7,6 @@
     "upgrade": "scripts/upgrade.sh",
     "upstart": "scripts/upgrade.sh && scripts/launch.sh",
     "pull": "git pull origin main",
-    "heroku-push": "git checkout staging && git subtree push --prefix clientaaaa heroku main && git checkout main"
+    "heroku-push": "git checkout staging && git subtree push --prefix client heroku main && git checkout main"
   }
 }
