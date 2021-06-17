@@ -1,7 +1,6 @@
-import React from "react";
 import classNames from "classnames";
-import { LOCATIONS } from "../../../../router";
-import { usePlatformContext } from "../../../../platform";
+import { LOCATIONS } from "@router";
+import { usePlatformContext } from "../../../../providers/platform";
 
 export const Navlogo = () => {
   const { isMobile } = usePlatformContext();

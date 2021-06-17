@@ -1,1 +1,1 @@
-export * from "./use-header-height"
+export * from "./use-header-height";

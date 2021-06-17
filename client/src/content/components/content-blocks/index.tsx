@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-assignment, @typescript-eslint/ban-ts-comment,  @typescript-eslint/no-use-before-define*/
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
 import classNames from "classnames";
-import { BlockImage } from "../images";
-import { usePlatformContext } from "../../../platform";
+import { usePlatformContext } from "@providers";
+import { BlockImage } from "@components/images";
 
 interface ContentBlocksProps {
   content: {

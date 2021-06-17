@@ -1,5 +1,4 @@
-import React from "react";
-import { usePlatformContext } from "../../../../../platform";
+import { usePlatformContext } from "@providers";
 import { DesktopNavbar } from "./desktop";
 import { MobileNavbar } from "./mobile";
 

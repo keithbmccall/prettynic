@@ -1,4 +1,4 @@
-import { LOCATIONS } from "../router";
+import { LOCATIONS } from "@router";
 
 export const navlinks = [
   {

@@ -1,11 +1,11 @@
-import React, { FC, useEffect } from "react";
-import { scrollToTop } from "../../utils";
+import { FC, useEffect } from "react";
+import { scrollToTop } from "@utils";
 
 interface PageProps {
   flush?: boolean;
 }
 
-export const Page: FC<PageProps> = ({ children, flush }) => {
+export const Page: FC<PageProps> = ({ children }) => {
   useEffect(() => {
     scrollToTop();
   }, []);

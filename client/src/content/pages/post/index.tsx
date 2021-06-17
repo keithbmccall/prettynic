@@ -1,10 +1,8 @@
-import React from "react";
+import { usePostQuery } from "@data";
+import { Loading } from "@components/loading";
 import { Page } from "../page";
-import { usePostQuery } from "../../../data";
-import { Loading } from "../../components/loading";
+import { usePlatformContext } from "../../../providers/platform";
 import Post from "./components/post";
-import classNames from "classnames";
-import { usePlatformContext } from "../../../platform";
 
 const PostsPage = () => {
   const { post, isLoading } = usePostQuery();
