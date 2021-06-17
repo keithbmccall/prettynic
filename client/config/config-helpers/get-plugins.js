@@ -19,7 +19,7 @@ const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const paths = require("./paths");
+const paths = require("../paths");
 
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
@@ -38,7 +38,7 @@ const getPlugins = ({
   env,
   isEnvProduction,
   webpackDevClientEntry,
-  useTypeScript,
+  useTypeScript,hasJsxRuntime
 }) => {
   return [
     // Generates an `index.html` file with the <script> injected.
