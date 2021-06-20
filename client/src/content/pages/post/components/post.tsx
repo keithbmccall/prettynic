@@ -5,6 +5,8 @@ import { PostType } from "@data";
 import { CoverImage } from "@components/images";
 import { ContentBlocks } from "@components/content-blocks";
 import { usePlatformContext } from "@providers";
+import { Time } from "@components/text";
+import { Divider } from "@components/pieces";
 import { useRouter } from "../../hooks";
 import { PostTitle } from "./post-title";
 
@@ -14,7 +16,7 @@ interface PostProps {
 }
 
 const Post: FC<PostProps> = ({ post, index = 0 }) => {
-  const { title, content, coverImage, date, tags, author, id, slug } = post;
+  const { title, content, coverImage, date, id, slug } = post;
   const { getPostTo } = useRouter();
   const { isMobile } = usePlatformContext();
   console.log({
@@ -24,18 +26,24 @@ const Post: FC<PostProps> = ({ post, index = 0 }) => {
 
   return (
     <div
-      className={classNames("pb5 w-100", {
-        pt5: index !== 0,
+      className={classNames("pb2 w-100", {
+        pt2: index !== 0,
       })}
       id={`${id}`}
     >
-      {isMobile && <CoverImage src={coverImage.url} alt={slug} />}
-      <PostTitle to={to} title={title} className="w-90 center" />
-      <p className="ma0 f6 tc light-silver w-90 center">{monthDayTime(date)}</p>
-      {!isMobile && (
-        <CoverImage src={coverImage.url} alt={slug} className="mt4" />
+      {isMobile && (
+        <CoverImage src={coverImage.url} alt={slug} className="pb4" />
       )}
-      <ContentBlocks content={content} containerClassName="w-90 center" />
+      <PostTitle to={to} text={title} className="w-90 center f1" />
+      <Time
+        className={classNames({ pb3: isMobile, pb1: !isMobile })}
+        time={monthDayTime(date)}
+      />
+      {!isMobile && (
+        <CoverImage src={coverImage.url} alt={slug} className="mt4 pb4" />
+      )}
+      <Divider width="1px" />
+      <ContentBlocks content={content} containerClassName="w-90 center pt2" />
     </div>
   );
 };
