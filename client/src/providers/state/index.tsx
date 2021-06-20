@@ -1,12 +1,24 @@
-import { createContext, FC, useContext, useEffect, useReducer } from "react";
-import { PostType, usePostsQuery } from "@data";
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import {
+  createContext,
+  Dispatch,
+  FC,
+  useContext,
+  useEffect,
+  useReducer,
+} from "react";
+import { PostType, useAllQuery, AllType, PagesType } from "@data";
 
 type State = {
-  posts: PostType[];
+  pages?: PagesType[];
+  posts?: PostType[];
+  isLoading?: boolean;
 };
 
 const InitialState: State = {
+  pages: [],
   posts: [],
+  isLoading: false,
 };
 
 const StateContext = createContext<State>(InitialState);
@@ -16,20 +28,20 @@ type ActionType<Name extends string, Payload = {}> = {
   payload: Payload;
 };
 
-type Action = ActionType<"FETCH_POSTS", PostType[]>;
+type Action = ActionType<"FETCH_ALL", AllType>;
 
 const StateReducer = (state: State, action: Action) => {
   switch (action.type) {
-    case "FETCH_POSTS":
-      return { ...state, posts: action.payload };
+    case "FETCH_ALL":
+      return { ...state, ...action.payload };
     default:
       return state;
   }
 };
 
-const fetchPosts = (dispatch) => (payload) =>
+const fetchAll = (dispatch: Dispatch<Action>) => (payload: State) =>
   dispatch({
-    type: "FETCH_POSTS",
+    type: "FETCH_ALL",
     payload,
   });
 
@@ -41,26 +53,37 @@ export const useAppContext = (): State => {
   return context;
 };
 
-export const usePosts = () => {
-  return useAppContext()?.posts;
+type ContextStateType = State & {
+  onFetchAll: (payload: State) => void;
 };
 
 export const StateContextProvider: FC = ({ children }) => {
-  const { posts } = usePostsQuery();
+  const allData = useAllQuery();
+
   const [state, dispatch] = useReducer(StateReducer, InitialState);
 
-  const contextState = {
+  const { isLoading, error, pages, posts } = allData;
+
+  const contextState: ContextStateType = {
     ...state,
-    onFetchPosts: fetchPosts(dispatch),
+    onFetchAll: fetchAll(dispatch),
   };
 
   useEffect(() => {
-    contextState.onFetchPosts(posts);
-  }, [posts]);
+    contextState.onFetchAll({ pages, posts, isLoading });
+  }, [pages, posts]);
 
   return (
     <StateContext.Provider value={contextState}>
       {children}
     </StateContext.Provider>
   );
+};
+
+export const usePosts = () => {
+  return useAppContext()?.posts;
+};
+
+export const usePages = () => {
+  return useAppContext()?.pages;
 };

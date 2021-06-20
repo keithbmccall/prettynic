@@ -33,3 +33,17 @@ export interface PostType {
   tags: string[];
   author: AuthorType;
 }
+
+//
+export interface PagesType {
+  id: string;
+  title: string;
+  slug: string;
+  subtitle: string;
+  content: ContentType;
+}
+
+export interface AllType {
+  pages?: PagesType[];
+  posts?: PostType[];
+}
