@@ -14,7 +14,7 @@ export const Layout: FC = (props) => {
         "bg-white black": !isDarkMode,
       })}
     >
-      {props.children}
+      <div className="center">{props.children}</div>
     </div>
   );
 };

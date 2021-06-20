@@ -2,7 +2,7 @@
 import { FC, ReactElement } from "react";
 import parse, { DOMNode } from "html-react-parser";
 import classNames from "classnames";
-import { usePlatformContext } from "@providers";
+import { useIsDarkMode, usePlatformContext } from "@providers";
 import { BlockImage } from "@components/images";
 
 interface ContentBlocksProps {
@@ -17,13 +17,15 @@ export const ContentBlocks: FC<ContentBlocksProps> = ({
   containerClassName,
 }) => {
   const { isMobile } = usePlatformContext();
+  const isDarkMode = useIsDarkMode();
 
   return (
     <div
       id="content-block"
       className={classNames(
         "justify-content items-center flex flex-column",
-        containerClassName
+        containerClassName,
+        { "dark-mode": isDarkMode }
       )}
     >
       {parse(content.html, {
