@@ -7,7 +7,7 @@ import {
   useEffect,
   useReducer,
 } from "react";
-import { PostType, useAllQuery, AllType, PagesType } from "@data";
+import { AllType, PagesType, PostType, useAllQuery } from "@data";
 
 type State = {
   pages?: PagesType[];
@@ -86,4 +86,8 @@ export const usePosts = () => {
 
 export const usePages = () => {
   return useAppContext()?.pages;
+};
+
+export const useAbout = () => {
+  return useAppContext()?.pages?.find((page) => page.title === "About");
 };

@@ -1,6 +1,6 @@
 import { usePlatformContext } from "@providers";
 import { Page } from "../page";
-import { usePost } from "../hooks/use-post";
+import { usePost } from "../hooks";
 import Post from "./components/post";
 
 const PostsPage = () => {
