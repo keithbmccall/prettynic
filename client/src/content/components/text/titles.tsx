@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { FC } from "react";
 
 export interface TitleProps {
-  className: string;
+  className?: string;
   text: string;
 }
 
