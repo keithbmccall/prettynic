@@ -1,4 +1,4 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import classNames from "classnames";
 import { monthDayTime } from "@utils";
 import { PostType } from "@data";
@@ -7,7 +7,7 @@ import { ContentBlocks } from "@components/content-blocks";
 import { usePlatformContext } from "@providers";
 import { Time } from "@components/text";
 import { Divider } from "@components/pieces";
-import { useRouter } from "../../hooks";
+import { useGetPostTo } from "../../hooks";
 import { PostTitle } from "./post-title";
 
 interface PostProps {
@@ -15,12 +15,13 @@ interface PostProps {
   index?: number;
 }
 
-const Post: FC<PostProps> = ({ post, index = 0 }) => {
-  const { title, content, coverImage, date, id, slug } = post;
-  const { getPostTo } = useRouter();
+const Post: FC<PostProps> = ({
+  post: { title, content, coverImage, date, id, slug },
+  index = 0,
+}) => {
   const { isMobile } = usePlatformContext();
 
-  const to = useMemo(() => getPostTo(id), [id, getPostTo]);
+  const to = useGetPostTo(id);
 
   return (
     <div
