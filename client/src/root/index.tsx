@@ -1,7 +1,7 @@
-import { Layout } from "@components/layout";
 import { Navbar } from "@components/header";
 import { PlatformContextProvider, StateContextProvider } from "@providers";
 import ContentRouter from "@router";
+import { Layout } from "../content/components/layout/layout";
 
 const Root = () => {
   return (

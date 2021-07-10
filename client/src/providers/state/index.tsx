@@ -73,6 +73,7 @@ export const StateContextProvider: FC = ({ children }) => {
     contextState.onFetchAll({ pages, posts, isLoading });
   }, [pages, posts]);
 
+  console.log({ contextState });
   return (
     <StateContext.Provider value={contextState}>
       {children}
