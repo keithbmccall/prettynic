@@ -7,7 +7,5 @@ export const usePost = (postId?: string) => {
   const { routeParams } = useRouter();
   const id = postId ?? routeParams?.id;
 
-  return useMemo(() => {
-    return posts?.find((p) => p?.id === id);
-  }, [posts]);
+  return useMemo(() => posts?.find((p) => p?.id === id), [id, posts]);
 };

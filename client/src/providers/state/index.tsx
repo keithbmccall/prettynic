@@ -62,7 +62,7 @@ export const StateContextProvider: FC = ({ children }) => {
 
   const [state, dispatch] = useReducer(StateReducer, InitialState);
 
-  const { isLoading, error, pages, posts } = allData;
+  const { isLoading, pages, posts } = allData;
 
   const contextState: ContextStateType = {
     ...state,
