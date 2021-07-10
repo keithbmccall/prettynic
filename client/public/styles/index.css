@@ -19,9 +19,14 @@ body {
 }
 
 .time,
+.fine-print,
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.fine-print{
+  font-size: 10px;
 }
 
 .time {

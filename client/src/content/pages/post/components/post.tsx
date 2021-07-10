@@ -19,9 +19,7 @@ const Post: FC<PostProps> = ({ post, index = 0 }) => {
   const { title, content, coverImage, date, id, slug } = post;
   const { getPostTo } = useRouter();
   const { isMobile } = usePlatformContext();
-  console.log({
-    index,
-  });
+
   const to = useMemo(() => getPostTo(id), [id, getPostTo]);
 
   return (

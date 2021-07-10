@@ -1,8 +1,9 @@
 import { FC } from "react";
 import classNames from "classnames";
 import { useIsDarkMode, usePlatformContext } from "@providers";
+import { Footer } from "../footer";
 
-export const Layout: FC = (props) => {
+export const Layout: FC = ({ children }) => {
   const { isMobile } = usePlatformContext();
   const isDarkMode = useIsDarkMode();
 
@@ -14,7 +15,8 @@ export const Layout: FC = (props) => {
         "bg-white black": !isDarkMode,
       })}
     >
-      <div className="center">{props.children}</div>
+      <div className="center">{children}</div>
+      <Footer />
     </div>
   );
 };
