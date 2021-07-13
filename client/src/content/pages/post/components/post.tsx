@@ -30,7 +30,7 @@ const Post: FC<PostProps> = ({
       })}
       id={`${id}`}
     >
-      {isMobile && (
+      {isMobile && coverImage && (
         <CoverImage src={coverImage.url} alt={slug} className="pb4" />
       )}
       <PostTitle to={to} text={title} className="w-90 center f1" />
@@ -38,7 +38,7 @@ const Post: FC<PostProps> = ({
         className={classNames({ pb3: isMobile, pb1: !isMobile })}
         time={monthDayTime(date)}
       />
-      {!isMobile && (
+      {!isMobile && coverImage && (
         <CoverImage src={coverImage.url} alt={slug} className="mt4 pb4" />
       )}
       <Divider width="1px" />
