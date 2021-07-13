@@ -49,7 +49,8 @@ const replacer: Replacer = (isMobile) => (domNode) => {
   if (domNode?.name === "img") {
     const image = domNode.attribs;
 
-    const size = isMobile ? {} : { height: image.height, width: image.width };
+    const size = isMobile ? {} : {}; // { height: image.height, width: image.width };
+
     return (
       <BlockImage src={image.src} alt={image.title} {...size} className="mv2" />
     );
