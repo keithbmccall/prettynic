@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { usePlatformContext } from "../../providers/platform";
+import { usePlatformContext } from "@providers";
 
 export const useHeaderHeight = () => {
   const { isMobile } = usePlatformContext();
