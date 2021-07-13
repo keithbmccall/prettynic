@@ -12,7 +12,7 @@ export const MobileNavbar = () => {
   return (
     <header
       {...style}
-      className={classNames("fixed top-0 left-0 w-100 pa2 bg-black", {
+      className={classNames("fixed z-max top-0 left-0 w-100 pa2 bg-black", {
         open: isNavbarOpen,
       })}
     >

@@ -25,7 +25,7 @@ export const ContentBlocks: FC<ContentBlocksProps> = ({
       className={classNames(
         "justify-content items-center flex flex-column",
         containerClassName,
-        { "dark-mode": isDarkMode }
+        { "dark-mode": isDarkMode, f6: isMobile, f5: !isMobile }
       )}
     >
       {parse(content.html, {
