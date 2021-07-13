@@ -12,11 +12,21 @@ const PlatformContext = createContext<PlatformContextType>({
 
 export const usePlatformContext = () => useContext(PlatformContext);
 
-const getIsMobile = (force?: boolean) =>
-  !force &&
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
+const getIsMobile = (force?: boolean) => {
+  const userAgent = navigator?.userAgent?.toLowerCase();
+
+  const isMobileOrTablet =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      userAgent
+    );
+
+  const isTablet =
+    /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+      userAgent
+    );
+
+  return !force && isMobileOrTablet && !isTablet;
+};
 
 export const PlatformContextProvider: FC = ({ children }) => {
   const [isMobile] = useState(getIsMobile());
