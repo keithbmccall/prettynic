@@ -11,8 +11,10 @@ export const Layout: FC = ({ children }) => {
     <div
       className={classNames("main center", {
         "pt5 mt5 mt4-l": !isMobile,
-        "bg-black white": isDarkMode,
-        "bg-white black": !isDarkMode,
+        // "bg-black white": isDarkMode,
+        // "bg-white black": !isDarkMode,
+          "bg-black black": isDarkMode,
+          "bg-white black": !isDarkMode,
       })}
     >
       <div className="center">{children}</div>

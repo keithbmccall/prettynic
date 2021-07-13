@@ -12,7 +12,7 @@ export const AboutPage = () => {
     <Page flush>
       {about && (
         <>
-          <Title text={about.title} />
+          <Title text={about.title} className="tc"/>
           <ContentBlocks content={about.content} />
         </>
       )}

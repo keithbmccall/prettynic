@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Title } from "@components/text";
 
 export interface PostTitleProps {
-  className: string;
+  className?: string;
   text: string;
   to?: string;
 }
