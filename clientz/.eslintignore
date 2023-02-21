@@ -1,6 +1,0 @@
-node_modules/*
-// TODO
-serviceWorker.ts
-config/**/*.js
-react-app-env.d.ts
-
