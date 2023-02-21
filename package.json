@@ -10,7 +10,8 @@
     "pull": "git pull origin main",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "format": "yarn run lint && yarn run prettier"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
@@ -83,6 +84,8 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-webpack-plugin": "^3.1.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "prettier-eslint": "^15.0.1",
     "prettier-plugin-organize-imports": "^3.2.2",
@@ -161,6 +164,16 @@
   "babel": {
     "presets": [
       "react-app"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn format"
     ]
   }
 }
