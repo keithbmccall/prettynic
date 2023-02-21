@@ -25,6 +25,7 @@ export interface ImageType {
 export interface PostType {
   id: string;
   title: string;
+  subtitle: string;
   slug: string;
   date: Date;
   excerpt: string;

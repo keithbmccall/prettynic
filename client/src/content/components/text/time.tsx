@@ -16,7 +16,7 @@ export const Time: FC<TimeProps> = ({ time, className }) => {
   return (
     <p
       className={classNames(
-        "ma0 f6 tc light-silver w-90 center time",
+        "ma0 f6 light-silver w-90 center time",
         className
       )}
       style={style}

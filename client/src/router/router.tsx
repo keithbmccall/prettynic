@@ -4,6 +4,7 @@ import HomePage from "../content/pages/home";
 import { AboutPage } from "../content/pages/about";
 import { ArchivePage } from "../content/pages/archive";
 import { LOCATIONS } from "./urls";
+import { ContactPage } from "../content/pages/contact";
 
 const ContentRouter = () => {
   return (
@@ -16,6 +17,9 @@ const ContentRouter = () => {
       </Route>
       <Route path={LOCATIONS.ARCHIVE}>
         <ArchivePage />
+      </Route>
+      <Route path={LOCATIONS.CONTACT}>
+        <ContactPage />
       </Route>
       <Route path={LOCATIONS.HOME}>
         <HomePage />

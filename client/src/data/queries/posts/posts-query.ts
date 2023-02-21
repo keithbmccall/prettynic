@@ -1,6 +1,7 @@
 export const PostsQuery = `posts {
             id
             title
+            subtitle
             slug
             date
             updatedAt
