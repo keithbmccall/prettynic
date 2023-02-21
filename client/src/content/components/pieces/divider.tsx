@@ -5,9 +5,10 @@ import { useIsDarkMode } from "@providers";
 export interface DividerProps {
   width?: string;
   color?: string;
+  className?: string;
 }
 
-export const Divider: FC<DividerProps> = ({ width, color }) => {
+export const Divider: FC<DividerProps> = ({ width, color, className }) => {
   const isDarkMode = useIsDarkMode();
   const style = (width && { borderTopWidth: width }) || {};
   return (
@@ -15,7 +16,7 @@ export const Divider: FC<DividerProps> = ({ width, color }) => {
       className={classNames("db bt", {
         [`b--${color}`]: color,
         [`b--${isDarkMode ? "dark-gray" : "gray"}`]: !color,
-      })}
+      },className)}
       style={style}
     />
   );

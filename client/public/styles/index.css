@@ -25,7 +25,7 @@ code {
     monospace;
 }
 
-.fine-print{
+.fine-print {
   font-size: 10px;
 }
 
@@ -117,4 +117,14 @@ p {
 
 #content-block.dark-mode p a:link {
   color: grey;
+}
+
+/**/
+.banner {
+  background-image: url("../assets/156725736-many-bright-sunflowers-and-sky-on-background-banner-design.jpeg");
+  background-repeat: repeat-x;
+  background-origin: border-box;
+  background-size: contain;
+  height:40px;
+
 }
