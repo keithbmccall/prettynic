@@ -4321,6 +4321,7 @@ __metadata:
     prettier: ^2.1.2
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-loader-spinner: ^4.0.0
     react-scripts: 5.0.1
     typescript: ^4.9.5
     web-vitals: ^2.1.4
@@ -10409,7 +10410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10601,6 +10602,18 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
+  languageName: node
+  linkType: hard
+
+"react-loader-spinner@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "react-loader-spinner@npm:4.0.0"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 419ca68445444a497f09ead8a040aa8d4a231d336573f345d2a26d39c2694fb8ba284c64c1e45b09a22e41e107f318b9b172f19f3e5bd1d5784dd24fb0101156
   languageName: node
   linkType: hard
 
