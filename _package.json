@@ -8,6 +8,6 @@
     "upstart": "scripts/upgrade.sh && scripts/launch.sh",
     "stage": "scripts/stage.sh",
     "pull": "git pull origin main",
-    "hp": "git checkout staging && git subtree push --prefix client heroku main && git checkout main"
+    "hp": "git checkout staging && git subtree push --prefix clientz heroku main && git checkout main"
   }
 }

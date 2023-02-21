@@ -1,18 +1,21 @@
 import "./config/wdyr";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 import Root from "./root";
-import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Root />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+      <BrowserRouter>
+          <Root />
+      </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -4,15 +4,9 @@
       "version": "detect"
     }
   },
-  "plugins": ["prettier", "jsx-a11y", "import", "@typescript-eslint"],
+  "plugins": ["prettier"],
   "extends": [
-    "kentcdodds",
-    "kentcdodds/react",
-    "kentcdodds/jsx-a11y",
-    "kentcdodds/best-practices",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier"
+    "kentcdodds",  "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "env": {

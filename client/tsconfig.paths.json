@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@providers": ["src/providers/index.ts"],
+      "@router": ["src/router/index.tsx"],
+      "@utils": ["src/utils/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@data": ["src/data/index.ts"],
+      "@components/content-blocks": [
+        "src/content/components/content-blocks/index.tsx"
+      ],
+      "@components/header": ["src/content/components/header/index.ts"],
+      "@components/images": ["src/content/components/images/index.tsx"],
+      "@components/loading": ["src/content/components/loading/index.tsx"],
+      "@components/layout": ["src/content/components/layout/index.tsx"],
+      "@components/text": ["src/content/components/text/index.ts"],
+      "@components/pieces": ["src/content/components/pieces/index.ts"]
+    }
+  }
+}
