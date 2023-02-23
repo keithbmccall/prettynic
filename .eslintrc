@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "react-app",
-    "react-app/jest",
-    "kentcdodds",
-    "prettier"
-  ],
+  "extends": ["react-app", "react-app/jest", "kentcdodds", "prettier"],
   "rules": {
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
@@ -16,6 +11,9 @@
     "@typescript-eslint/no-explicit-any": 1,
     "react/react-in-jsx-scope": 0,
     "react/no-unstable-nested-components": 0,
-    "one-var": 0
+    "one-var": 0,
+    "logical-assignment-operators": 0,
+    "no-empty-static-block": 0,
+    "no-new-native-nonconstructor": 0
   }
 }
