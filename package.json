@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "nodestart": "scripts/launch.sh",
-    "upgrade": "scripts/upgrade.sh",
-    "upstart": "scripts/upgrade.sh && scripts/launch.sh",
     "stage": "scripts/stage.sh",
     "pull": "git pull origin main",
     "start": "node scripts/start.js",

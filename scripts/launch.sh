@@ -7,7 +7,7 @@ osascript -e 'tell app "Terminal"
   do script "nicole && cd server && yarn start"
 end tell'
 
-cd client && yarn start
+yarn start
 
 
 
