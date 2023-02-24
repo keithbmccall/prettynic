@@ -1,13 +1,10 @@
 import { usePosts } from '@providers';
-import { useMemo } from 'react';
-import { useRouter } from './use-router';
+import { useParams } from 'react-router-dom';
 
 export const usePost = (postId?: string) => {
   const posts = usePosts();
-  const { routeParams } = useRouter();
-  const id = postId ?? routeParams?.id;
+  const { id: paramId } = useParams();
+  const id: string | undefined = postId ?? paramId;
 
-  return useMemo(() => {
-    return posts?.find(p => p?.id === id);
-  }, [id, posts]);
+  return posts?.find(p => p?.id === id);
 };

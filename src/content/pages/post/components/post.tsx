@@ -7,7 +7,7 @@ import { FC } from '@global-types';
 import { usePlatformContext } from '@providers';
 import { monthDayTime } from '@utils';
 import classNames from 'classnames';
-import { useGetPostTo } from '../../hooks';
+import { LOCATIONS } from '../../../../router';
 import { PostTitle } from './post-title';
 
 interface PostProps {
@@ -21,7 +21,7 @@ const Post: FC<PostProps> = ({
 }) => {
   const { isMobile } = usePlatformContext();
 
-  const to = useGetPostTo(id);
+  const to = `${LOCATIONS.POST}${id}`;
 
   return (
     <div

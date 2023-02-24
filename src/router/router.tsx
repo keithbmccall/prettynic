@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { AboutPage } from '../content/pages/about';
 import { ArchivePage } from '../content/pages/archive';
 import { ContactPage } from '../content/pages/contact';
@@ -8,23 +8,13 @@ import { LOCATIONS } from './urls';
 
 const ContentRouter = () => {
   return (
-    <Switch>
-      <Route path={`${LOCATIONS.POST}:id`}>
-        <PostsPage />
-      </Route>
-      <Route path={LOCATIONS.ABOUT}>
-        <AboutPage />
-      </Route>
-      <Route path={LOCATIONS.ARCHIVE}>
-        <ArchivePage />
-      </Route>
-      <Route path={LOCATIONS.CONTACT}>
-        <ContactPage />
-      </Route>
-      <Route path={LOCATIONS.HOME}>
-        <HomePage />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path={`${LOCATIONS.POST}:id`} element={<PostsPage />} />
+      <Route path={LOCATIONS.ABOUT} element={<AboutPage />} />
+      <Route path={LOCATIONS.ARCHIVE} element={<ArchivePage />} />
+      <Route path={LOCATIONS.CONTACT} element={<ContactPage />} />
+      <Route path={LOCATIONS.HOME} element={<HomePage />} />
+    </Routes>
   );
 };
 
