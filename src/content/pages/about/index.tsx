@@ -1,6 +1,6 @@
-import { ContentBlocks } from '@components/content-blocks';
 import { Title } from '@components/text';
 import { useAbout } from '@providers';
+import { ContentBlocks } from '../../components/content-blocks/content-blocks';
 import { Page } from '../page';
 
 export const AboutPage = () => {

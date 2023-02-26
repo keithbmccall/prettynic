@@ -55,7 +55,7 @@ const Post: FC<PostProps> = ({
       />
       <ContentBlocks content={content} containerClassName="w-90 center pt2" />
       {/*<Divider width="40px" color="black" />*/}
-      <div className="banner"></div>
+      <div className="banner" />
     </div>
   );
 };
