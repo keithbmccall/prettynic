@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { usePlatformContext } from '@providers';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ interface NavlinkProps {
   onClick?: () => void;
 }
 
-export const Navlink: FC<NavlinkProps> = ({
+export const Navlink: DC<NavlinkProps> = ({
   link: { name, href },
   onClick,
 }) => {

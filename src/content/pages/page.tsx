@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { scrollToTop } from '@utils';
 import { useEffect } from 'react';
 
@@ -6,7 +6,7 @@ interface PageProps {
   flush?: boolean;
 }
 
-export const Page: FC<PageProps> = ({ children }) => {
+export const Page: DC<PageProps> = ({ children }) => {
   useEffect(() => {
     scrollToTop();
   }, []);

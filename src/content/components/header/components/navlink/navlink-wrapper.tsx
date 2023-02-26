@@ -1,5 +1,5 @@
 import { navlinks } from '@data';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { usePlatformContext } from '@providers';
 import classNames from 'classnames';
 import { Navlink } from './navlink';
@@ -7,7 +7,7 @@ import { Navlink } from './navlink';
 interface NavlinkWrapperProps {
   onClick?: () => void;
 }
-export const NavlinkWrapper: FC<NavlinkWrapperProps> = ({ onClick }) => {
+export const NavlinkWrapper: DC<NavlinkWrapperProps> = ({ onClick }) => {
   const { isMobile } = usePlatformContext();
 
   return (

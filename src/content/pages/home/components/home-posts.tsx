@@ -1,9 +1,9 @@
 import { Loading } from '@components/loading';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { usePosts } from '../../../../providers/state';
 import Post from '../../post/components/post';
 
-const HomePosts: FC = () => {
+const HomePosts: DC = () => {
   const posts = usePosts();
 
   return (

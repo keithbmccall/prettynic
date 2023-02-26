@@ -1,5 +1,5 @@
 import { Title } from '@components/text';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { Link } from 'react-router-dom';
 
 export interface PostTitleProps {
@@ -8,7 +8,7 @@ export interface PostTitleProps {
   to?: string;
 }
 
-export const PostTitle: FC<PostTitleProps> = ({ text, to, className }) => {
+export const PostTitle: DC<PostTitleProps> = ({ text, to, className }) => {
   return to ? (
     <Link to={to} className="link dim dark-red">
       <Title className={className} text={text} />

@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import classNames from 'classnames';
 
 interface ImageProps {
@@ -9,7 +9,7 @@ interface ImageProps {
   width?: number;
 }
 
-export const CoverImage: FC<ImageProps> = ({ src, alt, className }) => (
+export const CoverImage: DC<ImageProps> = ({ src, alt, className }) => (
   <div className="mb3 flex justify-center" style={{ maxHeight: '600px' }}>
     <img
       src={src}
@@ -22,7 +22,7 @@ export const CoverImage: FC<ImageProps> = ({ src, alt, className }) => (
   </div>
 );
 
-export const BlockImage: FC<ImageProps> = ({
+export const BlockImage: DC<ImageProps> = ({
   src,
   alt,
   className,

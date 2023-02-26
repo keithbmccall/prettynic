@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { createContext, useContext, useState } from 'react';
 
 type PlatformContextType = {
@@ -29,7 +29,7 @@ const getIsMobile = (force?: boolean) => {
   return !force && isMobileOrTablet && !isTablet;
 };
 
-export const PlatformContextProvider: FC = ({ children }) => {
+export const PlatformContextProvider: DC = ({ children }) => {
   const [isMobile] = useState(getIsMobile());
   const [isDarkMode] = useState(true);
 

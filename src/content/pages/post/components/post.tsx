@@ -3,7 +3,7 @@ import { CoverImage } from '@components/images';
 import { Divider } from '@components/pieces';
 import { Time, Title } from '@components/text';
 import { PostType } from '@data';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { usePlatformContext } from '@providers';
 import { monthDayTime } from '@utils';
 import classNames from 'classnames';
@@ -15,7 +15,7 @@ interface PostProps {
   index?: number;
 }
 
-const Post: FC<PostProps> = ({
+const Post: DC<PostProps> = ({
   post: { title, content, coverImage, date, id, slug, author, subtitle },
   index = 0,
 }) => {

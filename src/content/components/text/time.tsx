@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { usePlatformContext } from '@providers';
 import classNames from 'classnames';
 
@@ -8,7 +8,7 @@ export interface TimeProps {
 }
 const timeStyle = { fontSize: '11px' };
 
-export const Time: FC<TimeProps> = ({ time, className }) => {
+export const Time: DC<TimeProps> = ({ time, className }) => {
   const { isMobile } = usePlatformContext();
 
   const style = (isMobile && timeStyle) || {};

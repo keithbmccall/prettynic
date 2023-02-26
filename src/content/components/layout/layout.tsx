@@ -1,9 +1,9 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { useIsDarkMode, usePlatformContext } from '@providers';
 import classNames from 'classnames';
 import { Footer } from '../footer';
 
-export const Layout: FC = ({ children }) => {
+export const Layout: DC = ({ children }) => {
   const { isMobile } = usePlatformContext();
   const isDarkMode = useIsDarkMode();
 

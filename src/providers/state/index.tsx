@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { AllType, PagesType, PostType, useAllQuery } from '@data';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import {
   createContext,
   Dispatch,
@@ -57,7 +57,7 @@ type ContextStateType = State & {
   onFetchAll: (payload: State) => void;
 };
 
-export const StateContextProvider: FC = ({ children }) => {
+export const StateContextProvider: DC = ({ children }) => {
   const allData = useAllQuery();
 
   const [state, dispatch] = useReducer(StateReducer, InitialState);

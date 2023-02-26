@@ -1,11 +1,9 @@
 import { PropsWithChildren } from 'react';
 
-export interface FC<P = {}> {
+export interface DC<P = {}> {
   (props: PropsWithChildren<P>, context?: any): React.ReactElement<
     any,
     any
   > | null;
 }
-// export type FC = React.FC & {
-//     children?: React.ReactNode
-// }
+

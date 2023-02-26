@@ -1,5 +1,5 @@
 import { BlockImage } from '@components/images';
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { useIsDarkMode, usePlatformContext } from '@providers';
 import classNames from 'classnames';
 import { parseContent } from './parse-content';
@@ -11,7 +11,7 @@ interface ContentBlocksProps {
   containerClassName?: string;
 }
 
-export const ContentBlocks: FC<ContentBlocksProps> = ({
+export const ContentBlocks: DC<ContentBlocksProps> = ({
   content,
   containerClassName,
 }) => {

@@ -1,8 +1,8 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { Page } from '../page';
 import HomePosts from './components/home-posts';
 
-const HomePage: FC = () => {
+const HomePage: DC = () => {
   return (
     <Page>
       <HomePosts />

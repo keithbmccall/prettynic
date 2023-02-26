@@ -1,4 +1,4 @@
-import { FC } from '@global-types';
+import { DC } from '@global-types';
 import { useIsDarkMode } from '@providers';
 import classNames from 'classnames';
 
@@ -8,7 +8,7 @@ export interface DividerProps {
   className?: string;
 }
 
-export const Divider: FC<DividerProps> = ({ width, color, className }) => {
+export const Divider: DC<DividerProps> = ({ width, color, className }) => {
   const isDarkMode = useIsDarkMode();
   const style = (width && { borderTopWidth: width }) || {};
   return (
