@@ -1,4 +1,4 @@
-import { BlockImage } from '@components/images';
+import { BlockImage } from '../images/block-image';
 import { DC } from '@global-types';
 import { useIsDarkMode, usePlatformContext } from '@providers';
 import classNames from 'classnames';

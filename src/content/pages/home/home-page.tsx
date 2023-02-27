@@ -1,11 +1,11 @@
 import { DC } from '@global-types';
 import { Page } from '../page';
-import HomePosts from './components/home-posts';
+import Posts from '../post/components/posts';
 
 const HomePage: DC = () => {
   return (
     <Page>
-      <HomePosts />
+      <Posts />
     </Page>
   );
 };

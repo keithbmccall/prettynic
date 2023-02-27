@@ -1,5 +1,5 @@
 import { ContentBlocks } from '@components/content-blocks';
-import { CoverImage } from '@components/images';
+import { CoverImage } from '../../../components/images/block-image';
 import { Divider } from '@components/pieces';
 import { Time, Title } from '@components/text';
 import { PostType } from '@data';

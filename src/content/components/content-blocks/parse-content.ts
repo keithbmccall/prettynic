@@ -1,6 +1,6 @@
 import parse, { DOMNode } from 'html-react-parser';
 
-type Replace = (
+type Replacer = (
   domNode: DOMNode & {
     name: 'div' | 'img' | 'p';
     attribs: {
@@ -8,11 +8,12 @@ type Replace = (
       title: string;
     };
   },
+  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
 ) => JSX.Element | object | void | undefined | null | false;
 
 type ParseContent = (
   html: string,
-  replace: Replace,
+  replace: Replacer,
 ) => string | JSX.Element | JSX.Element[];
 
 export const parseContent: ParseContent = (html, replace) =>
