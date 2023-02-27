@@ -1,5 +1,4 @@
 import { ContentBlocks } from '@components/content-blocks';
-import { CoverImage } from '../../../components/images/block-image';
 import { Divider } from '@components/pieces';
 import { Time, Title } from '@components/text';
 import { PostType } from '@data';
@@ -8,6 +7,7 @@ import { usePlatformContext } from '@providers';
 import { monthDayTime } from '@utils';
 import classNames from 'classnames';
 import { LOCATIONS } from '../../../../router';
+import { CoverImage } from '../../../components/images';
 import { PostTitle } from './post-title';
 
 interface PostProps {

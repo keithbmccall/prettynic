@@ -1,7 +1,7 @@
-import { BlockImage } from '../images/block-image';
 import { DC } from '@global-types';
 import { useIsDarkMode, usePlatformContext } from '@providers';
 import classNames from 'classnames';
+import { BlockImage } from '../images/block-image';
 import { parseContent } from './parse-content';
 
 interface ContentBlocksProps {
