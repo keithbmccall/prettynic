@@ -6,9 +6,9 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  font-family: "Commissioner", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: 'Commissioner', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
@@ -21,7 +21,7 @@ body {
 .time,
 .fine-print,
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
@@ -121,10 +121,9 @@ p {
 
 /**/
 .banner {
-  background-image: url("../assets/156725736-many-bright-sunflowers-and-sky-on-background-banner-design.jpeg");
+  /*background-image: url("../../public/assets/156725736-many-bright-sunflowers-and-sky-on-background-banner-design.jpeg");*/
   background-repeat: repeat-x;
   background-origin: border-box;
   background-size: contain;
-  height:40px;
-
+  height: 40px;
 }

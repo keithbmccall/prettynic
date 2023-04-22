@@ -1,4 +1,4 @@
-import Loader from 'react-loader-spinner';
+import { TailSpin } from 'react-loader-spinner';
 import { useHeaderHeight } from '../../hooks';
 
 export const Loading = () => {
@@ -11,7 +11,7 @@ export const Loading = () => {
       }}
     >
       <div className="flex items-center justify-center h-100">
-        <Loader type="TailSpin" height={100} width={100} color="#fff" />
+        <TailSpin height={100} width={100} color="#fff" />
       </div>
     </div>
   );

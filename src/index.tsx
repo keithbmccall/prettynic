@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { BrowserRouter } from 'react-router-dom';
 import './config/wdyr';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Root from './root';
+import './styles/index.css';
+import './styles/tachyons.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
