@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import './config/wdyr';
+import './dev-tools/wdyr';
 import reportWebVitals from './reportWebVitals';
 import Root from './root';
 import './styles/index.css';
 import './styles/tachyons.min.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement,
-);
-root.render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Root />
