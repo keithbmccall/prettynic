@@ -15,7 +15,7 @@ export const Time: DC<TimeProps> = ({ time, className }) => {
 
   return (
     <p
-      className={classNames('ma0 f6 light-silver w-90 center time', className)}
+      className={classNames('ma0 f6 light-silver center time', className)}
       style={style}
     >
       {time}

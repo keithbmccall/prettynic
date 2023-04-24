@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { ImageProps } from './types';
 
 export const CoverImage: DC<ImageProps> = ({ src, alt, className }) => (
-  <div className="mb3 flex justify-center" style={{ maxHeight: '600px' }}>
+  <div className="flex justify-center" style={{ maxHeight: '600px' }}>
     <img
       src={src}
       alt={alt}

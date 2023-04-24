@@ -7,5 +7,5 @@ export interface TitleProps {
 }
 
 export const Title: DC<TitleProps> = ({ className, text }) => {
-  return <h2 className={classNames('mt2 mb1 b', className)}>{text}</h2>;
+  return <h2 className={classNames('ma0 b', className)}>{text}</h2>;
 };

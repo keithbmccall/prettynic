@@ -21,7 +21,7 @@ export const MobileNavbar = () => {
         <Navlogo />
       </div>
 
-      <nav id="nav" className="absolute w-90 top-0 left-0 vh-100 pa5">
+      <nav id="nav" className="absolute top-0 left-0 vh-100 pa5">
         <NavlinkWrapper onClick={closeNavbar} />
       </nav>
     </header>
