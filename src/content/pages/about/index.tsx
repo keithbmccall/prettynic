@@ -11,10 +11,10 @@ export const AboutPage = () => {
   return (
     <Page flush>
       {about && (
-        <>
+        <div>
           <Title text={about.title} className="tc" />
           <ContentBlocks content={about.content} />
-        </>
+        </div>
       )}
     </Page>
   );

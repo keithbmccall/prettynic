@@ -8,7 +8,7 @@ type PlatformContextType = {
 
 const PlatformContext = createContext<PlatformContextType>({
   isMobile: true,
-  isDarkMode: true,
+  isDarkMode: false,
 });
 
 export const usePlatformContext = () => useContext(PlatformContext);
@@ -31,7 +31,7 @@ const getIsMobile = (force?: boolean) => {
 
 export const PlatformContextProvider: DC = ({ children }) => {
   const [isMobile] = useState(getIsMobile());
-  const [isDarkMode] = useState(true);
+  const [isDarkMode] = useState(false);
 
   return (
     <PlatformContext.Provider value={{ isMobile, isDarkMode }}>

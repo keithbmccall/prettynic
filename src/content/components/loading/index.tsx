@@ -5,7 +5,7 @@ export const Loading = () => {
   const { headerHeight } = useHeaderHeight();
   return (
     <div
-      className="fixed z-9999 w-100 h-100 left-0  bg-black"
+      className="fixed z-9999 w-100 h-100 left-0 bg-white"
       style={{
         top: headerHeight,
       }}

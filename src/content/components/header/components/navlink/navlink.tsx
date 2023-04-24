@@ -21,7 +21,7 @@ export const Navlink: DC<NavlinkProps> = ({
     <li>
       <Link
         className={classNames('link dim f5-l dib mh2 ml4-l mr0-l fw6', {
-          'f5 white ttc': !isMobile,
+          'f5 black ttc': !isMobile,
           'mv2 f3 black ttu tracked': isMobile,
         })}
         to={href}
