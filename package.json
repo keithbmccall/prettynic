@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "nodestart": "scripts/launch.sh",
-    "stage": "scripts/stage.sh",
-    "pull": "git pull origin main",
-    "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "prepare": "husky install"
+    "nodestart": "scripts/launch.sh",
+    "nuke": "rm -rf node_modules; yarn;",
+    "prepare": "husky install",
+    "stage": "scripts/stage.sh",
+    "start": "node scripts/start.js",
+    "test": "node scripts/test.js"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",

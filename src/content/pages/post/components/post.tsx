@@ -32,14 +32,7 @@ const Post: DC<PostProps> = ({
         })}
         id={`${id}`}
       >
-        <PostTitle
-          to={to}
-          text={title}
-          className={classNames('center tc ph3', {
-            f1: !isMobile,
-            f2: isMobile,
-          })}
-        />
+        <PostTitle to={to} text={title} className="center tc ph3 f2 f1-l" />
         <div className="ph3">
           {!isMobile && coverImage && (
             <CoverImage src={coverImage.url} alt={slug} className="mt4 pb0" />
@@ -50,10 +43,7 @@ const Post: DC<PostProps> = ({
         <Divider width="1px" />
         <div className="ph3 mt3">
           <Title text={subtitle} className="tl center" />
-          <Time
-            className={classNames('tl', { pb0: isMobile, pb1: !isMobile })}
-            time={monthDayTime(date)}
-          />
+          <Time className="tl pb0 pb-l" time={monthDayTime(date)} />
           <ContentBlocks content={content} containerClassName="center mt2" />
           {/*<Divider width="40px" color="black" />*/}
         </div>

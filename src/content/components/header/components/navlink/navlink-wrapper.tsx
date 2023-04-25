@@ -13,7 +13,7 @@ export const NavlinkWrapper: DC<NavlinkWrapperProps> = ({ onClick }) => {
   return (
     <ul
       className={classNames('list pa0 flex', {
-        'justify-center ': !isMobile,
+        'justify-center': !isMobile,
         'flex-column tc w-100 pl0': isMobile,
       })}
     >

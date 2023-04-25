@@ -6,4 +6,3 @@ export interface DC<P = {}> {
     any
   > | null;
 }
-
