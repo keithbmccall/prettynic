@@ -1,3 +1,4 @@
+'use client';
 import { DC } from '@global-types';
 import { createContext, useContext, useState } from 'react';
 

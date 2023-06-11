@@ -1,4 +1,4 @@
-import { useAppContext } from './state-context-provider';
+import { useAppContext } from './data-provider';
 
 export const usePosts = () => {
   return useAppContext()?.posts;

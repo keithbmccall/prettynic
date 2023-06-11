@@ -1,17 +1,17 @@
 import { Navbar } from '@components/header';
-import { PlatformContextProvider, StateContextProvider } from '@providers';
+import { DataProvider, PlatformContextProvider } from '@providers';
 import { Layout } from '../content/components/layout';
 import ContentRouter from '../router';
 
 const Root = () => {
   return (
     <PlatformContextProvider>
-      <StateContextProvider>
+      <DataProvider>
         <Layout>
           <Navbar />
           <ContentRouter />
         </Layout>
-      </StateContextProvider>
+      </DataProvider>
     </PlatformContextProvider>
   );
 };

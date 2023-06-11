@@ -1,3 +1,5 @@
+import { useAllQuery } from '@data';
+import { DataProvider } from '@providers';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -13,9 +15,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { isLoading, pages, posts } = useAllQuery();
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <DataProvider isLoading={isLoading} posts={posts} pages={pages}>
+          {children}
+        </DataProvider>
+      </body>
     </html>
   );
 }
