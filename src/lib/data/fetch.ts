@@ -20,6 +20,10 @@ export const fetchQuery = async (
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       body: JSON.stringify({ query, variables }),
     });
+    if (!response.ok) {
+      // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data');
+    }
     return await response.json();
   } catch (e: unknown) {
     console.log(`You messed up the query, man: `, { e });

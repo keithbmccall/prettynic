@@ -18,6 +18,10 @@ export const DataProvider: DC<Data> = ({
   pages,
   posts,
 }) => {
+  console.log({
+    pages,
+    posts,
+  });
   return (
     <DataContext.Provider
       value={{

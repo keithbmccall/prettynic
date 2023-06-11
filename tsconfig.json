@@ -24,7 +24,8 @@
       "@global-types": ["./src/lib/types.ts"],
       "@data": ["./src/lib/data"],
       "@providers": ["./src/lib/providers"],
-      "@utils": ["./src/lib/utils"]
+      "@utils": ["./src/lib/utils"],
+      "@keychain": ["./src/keychain"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
