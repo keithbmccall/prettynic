@@ -20,11 +20,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <DataProvider posts={posts} pages={pages}>
-          {children}
-        </DataProvider>
-      </body>
+      <DataProvider posts={posts} pages={pages}>
+        <body className={inter.className}>{children}</body>
+      </DataProvider>
     </html>
   );
 }
