@@ -8,11 +8,5 @@ export interface PostTitleProps {
 }
 
 export const PostTitle: DC<PostTitleProps> = ({ text, to, className }) => {
-  return;
-  // to ? (
-  //   <Link to={to} className="link dim dark-red">
-  //     <Title className={className} text={text} />
-  //   </Link>
-  // ) :
-  <Title className={className} text={text} />;
+  return <Title className={className} text={text} />;
 };

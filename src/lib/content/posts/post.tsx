@@ -42,7 +42,7 @@ const Post: DC<PostProps> = ({
           <Title text={subtitle} className="tl center" />
           <Time className="tl pb0 pb-l" time={monthDayTime(date)} />
           <ContentBlocks content={content} containerClassName="center mt2" />
-          <Divider width="40px" color="black" />
+          <Divider width="4px" color="black" />
         </div>
       </div>
     </>

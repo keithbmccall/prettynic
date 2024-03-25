@@ -1,3 +1,4 @@
+/* GraphQL */
 export const PostsQuery = `posts {
             id
             title
@@ -16,15 +17,16 @@ export const PostsQuery = `posts {
             excerpt
             tags
             author {
+              biography
               name
-              title
               picture {
+                fileName
+                height
                 id
                 url
-                fileName
                 width
-                height
               }
+              title
             }
             content {
               raw
